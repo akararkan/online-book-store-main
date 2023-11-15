@@ -39,29 +39,29 @@ if (isset($_SESSION['user_id']) &&
 
 		#simple form Validation
 
-        $text = "Book title";
+        $text = "ناوی کتێب";
         $location = "../add-book.php";
         $ms = "error";
 		is_empty($title, $text, $location, $ms, $user_input);
 
-		$text = "Book description";
+		$text = "ناساندنی کتێب";
         $location = "../add-book.php";
         $ms = "error";
 		is_empty($description, $text, $location, $ms, $user_input);
 
-		$text = "Book author";
+		$text = "نووسەر";
         $location = "../add-book.php";
         $ms = "error";
 		is_empty($author, $text, $location, $ms, $user_input);
 
-		$text = "Book category";
+		$text = "هاوپۆلی کتێب";
         $location = "../add-book.php";
         $ms = "error";
 		is_empty($category, $text, $location, $ms, $user_input);
         
         # book cover Uploading
         $allowed_image_exs = array("jpg", "jpeg", "png");
-        $path = "cover";
+        $path = "covers";
         $book_cover = upload_file($_FILES['book_cover'], $allowed_image_exs, $path);
 
         /**
@@ -121,12 +121,12 @@ if (isset($_SESSION['user_id']) &&
 		    **/
 		     if ($res) {
 		     	# success message
-		     	$sm = "The book successfully created!";
+		     	$sm = "بەسەرکەوتووی زیادکرا";
 				header("Location: ../add-book.php?success=$sm");
 	            exit;
 		     }else{
 		     	# Error message
-		     	$em = "Unknown Error Occurred!";
+		     	$em = "هەڵەیەک ڕوویدا لە زیادکردنی کتێب";
 				header("Location: ../add-book.php?error=$em");
 	            exit;
 		     }

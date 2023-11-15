@@ -42,7 +42,7 @@ function upload_file($files, $allowed_exs, $path){
                Creating success message associative array
                with named keys status and data
             **/
-            $sm['status'] = 'success';
+            $sm['status'] = 'سەرکەوتوو';
 	        $sm['data']   = $new_file_name;
 
 	        #  Return the sm array
@@ -53,8 +53,8 @@ function upload_file($files, $allowed_exs, $path){
 	       Creating error message associative array
 	       with named keys status and data
 	     **/
-	      $em['status'] = 'error';
-	      $em['data']   = "You can't upload files of this type";
+	      $em['status'] = 'هەڵە';
+	      $em['data']   = "تکایە پەڕگەیەکی پێویست هەڵبژێریت";
 
 	      #  Return the em array
 	      return $em;
@@ -64,8 +64,8 @@ function upload_file($files, $allowed_exs, $path){
        Creating error message associative array
       with named keys status and data
      **/
-      $em['status'] = 'error';
-      $em['data']   = 'Error occurred while uploading!';
+      $em['status'] = 'هەڵە';
+      $em['data']   = 'هەڵەیەک ڕوویدا لە بارکردنی پەڕگە';
 
       #  Return the em array
       return $em;

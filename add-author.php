@@ -11,7 +11,7 @@ if (isset($_SESSION['user_id']) &&
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Add Author</title>
+	<title>زیادکردنی نووسەر</title>
 
     <!-- bootstrap 5 CDN-->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
@@ -24,7 +24,7 @@ if (isset($_SESSION['user_id']) &&
 	<div class="container">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		  <div class="container-fluid">
-		    <a class="navbar-brand" href="admin.php">Admin</a>
+		    <a class="navbar-brand" href="admin.php">ئادمین</a>
 		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		      <span class="navbar-toggler-icon"></span>
 		    </button>
@@ -34,23 +34,23 @@ if (isset($_SESSION['user_id']) &&
 		        <li class="nav-item">
 		          <a class="nav-link" 
 		             aria-current="page" 
-		             href="index.php">Store</a>
+		             href="index.php">کۆگا</a>
 		        </li>
 		        <li class="nav-item">
 		          <a class="nav-link" 
-		             href="add-book.php">Add Book</a>
+		             href="add-book.php">زیادکردنی کتێب</a>
 		        </li>
 		        <li class="nav-item">
 		          <a class="nav-link" 
-		             href="add-category.php">Add Category</a>
+		             href="add-category.php">زیادکردنی هاوپۆل</a>
 		        </li>
 		        <li class="nav-item">
 		          <a class="nav-link active" 
-		             href="add-author.php">Add Author</a>
+		             href="add-author.php">زیادکردنی نووسەر</a>
 		        </li>
 		        <li class="nav-item">
 		          <a class="nav-link" 
-		             href="logout.php">Logout</a>
+		             href="logout.php">چوونە دەرەوە</a>
 		        </li>
 		      </ul>
 		    </div>
@@ -62,7 +62,7 @@ if (isset($_SESSION['user_id']) &&
            style="width: 90%; max-width: 50rem;">
 
      	<h1 class="text-center pb-5 display-4 fs-3">
-     		Add New Author
+     		نوسەری نوێ زیاد بکە
      	</h1>
      	<?php if (isset($_GET['error'])) { ?>
           <div class="alert alert-danger" role="alert">
@@ -76,7 +76,7 @@ if (isset($_SESSION['user_id']) &&
 		<?php } ?>
      	<div class="mb-3">
 		    <label class="form-label">
-		           	Author Name
+		           	ناوی نووسەر
 		           </label>
 		    <input type="text" 
 		           class="form-control" 
@@ -85,7 +85,7 @@ if (isset($_SESSION['user_id']) &&
 
 	    <button type="submit" 
 	            class="btn btn-primary">
-	            Add Author</button>
+	            زیادکردن</button>
      </form>
 	</div>
 </body>

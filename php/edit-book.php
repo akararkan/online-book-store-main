@@ -48,22 +48,22 @@ if (isset($_SESSION['user_id']) &&
         $current_file  = $_POST['current_file'];
 
         #simple form Validation
-        $text = "Book title";
+        $text = "ناوی کتێب";
         $location = "../edit-book.php";
         $ms = "id=$id&error";
 		is_empty($title, $text, $location, $ms, "");
 
-		$text = "Book description";
+		$text = "ناساندنی کتێب";
         $location = "../edit-book.php";
         $ms = "id=$id&error";
 		is_empty($description, $text, $location, $ms, "");
 
-		$text = "Book author";
+		$text = "نووسەر";
         $location = "../edit-book.php";
         $ms = "id=$id&error";
 		is_empty($author, $text, $location, $ms, "");
 
-		$text = "Book category";
+		$text = "هاوپۆلی کتێب";
         $location = "../edit-book.php";
         $ms = "id=$id&error";
 		is_empty($category, $text, $location, $ms, "");
@@ -141,12 +141,12 @@ if (isset($_SESSION['user_id']) &&
 				    **/
 				     if ($res) {
 				     	# success message
-				     	$sm = "Successfully updated!";
+				     	$sm = "بەسەرکەوتووی گۆڕانکاری ئەنجام درا";
 						header("Location: ../edit-book.php?success=$sm&id=$id");
 			            exit;
 				     }else{
 				     	# Error message
-				     	$em = "Unknown Error Occurred!";
+				     	$em = "هەڵەیەک ڕوویدا لە گۆڕانکاریەکەدا";
 						header("Location: ../edit-book.php?error=$em&id=$id");
 			            exit;
 				     }
@@ -205,12 +205,12 @@ if (isset($_SESSION['user_id']) &&
 				    **/
 				     if ($res) {
 				     	# success message
-				     	$sm = "Successfully updated!";
+				     	$sm = "بەسەرکەوتووی گۆڕانکاری ئەنجام درا";
 						header("Location: ../edit-book.php?success=$sm&id=$id");
 			            exit;
 				     }else{
 				     	# Error message
-				     	$em = "Unknown Error Occurred!";
+				     	$em = "هەڵەیەک ڕوویدا لە گۆڕانکاریەکەدا";
 						header("Location: ../edit-book.php?error=$em&id=$id");
 			            exit;
 				     }
@@ -276,12 +276,12 @@ if (isset($_SESSION['user_id']) &&
 			    **/
 			     if ($res) {
 			     	# success message
-			     	$sm = "Successfully updated!";
+			     	$sm = "بەسەرکەوتووی گۆڕانکاری ئەنجام درا";
 					header("Location: ../edit-book.php?success=$sm&id=$id");
 		            exit;
 			     }else{
 			     	# Error message
-			     	$em = "Unknown Error Occurred!";
+			     	$em = "هەڵەیەک ڕوویدا لە گۆڕانکاریەکەدا";
 					header("Location: ../edit-book.php?error=$em&id=$id");
 		            exit;
 			     }
@@ -306,12 +306,12 @@ if (isset($_SESSION['user_id']) &&
 		    **/
 		     if ($res) {
 		     	# success message
-		     	$sm = "Successfully updated!";
+		     	$sm = "بەسەرکەوتووی گۆڕانکاری ئەنجام درا";
 				header("Location: ../edit-book.php?success=$sm&id=$id");
 	            exit;
 		     }else{
 		     	# Error message
-		     	$em = "Unknown Error Occurred!";
+		     	$em = "هەڵەیەک ڕوویدا لە گۆڕانکاریەکەدا";
 				header("Location: ../edit-book.php?error=$em&id=$id");
 	            exit;
 		     }

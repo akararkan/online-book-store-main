@@ -22,7 +22,7 @@ if (isset($_SESSION['user_id']) &&
 
 		#simple form Validation
 		if (empty($name)) {
-			$em = "The author name is required";
+			$em = "ناوی نووسەر نەنووسیوە";
 			header("Location: ../add-author.php?error=$em");
             exit;
 		}else {
@@ -38,12 +38,12 @@ if (isset($_SESSION['user_id']) &&
 		    **/
 		     if ($res) {
 		     	# success message
-		     	$sm = "Successfully created!";
+		     	$sm = "بەسەرکەوتووی زیادکرا";
 				header("Location: ../add-author.php?success=$sm");
 	            exit;
 		     }else{
 		     	# Error message
-		     	$em = "Unknown Error Occurred!";
+		     	$em = "هەڵەیەک ڕوویدا لە زیادکردنی نووسەر";
 				header("Location: ../add-author.php?error=$em");
 	            exit;
 		     }

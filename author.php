@@ -59,23 +59,23 @@ $categories = get_all_categories($conn);
 		        <li class="nav-item">
 		          <a class="nav-link active" 
 		             aria-current="page" 
-		             href="index.php">Store</a>
+		             href="index.php">کۆگا</a>
 		        </li>
 		        <li class="nav-item">
 		          <a class="nav-link" 
-		             href="#">Contact</a>
+		             href="#">پەیوەندی</a>
 		        </li>
 		        <li class="nav-item">
 		          <a class="nav-link" 
-		             href="#">About</a>
+		             href="#">دەربارە</a>
 		        </li>
 		        <li class="nav-item">
 		          <?php if (isset($_SESSION['user_id'])) {?>
 		          	<a class="nav-link" 
-		             href="admin.php">Admin</a>
+		             href="admin.php">ئادمین</a>
 		          <?php }else{ ?>
 		          <a class="nav-link" 
-		             href="login.php">Login</a>
+		             href="login.php">چوونەژوورەوە</a>
 		          <?php } ?>
 
 		        </li>
@@ -99,7 +99,7 @@ $categories = get_all_categories($conn);
         	     <img src="img/empty.png" 
         	          width="100">
         	     <br>
-			    There is no book in the database
+			    هیچ کتێبێک نییە لە بنکەدراوە
 		       </div>
 			<?php }else{ ?>
 			<div class="pdf-list d-flex flex-wrap">
@@ -112,7 +112,7 @@ $categories = get_all_categories($conn);
 							<?=$book['title']?>
 						</h5>
 						<p class="card-text">
-							<i><b>By:
+							<i><b>لەلایەن:
 								<?php foreach($authors as $author){ 
 									if ($author['id'] == $book['author_id']) {
 										echo $author['name'];
@@ -123,7 +123,7 @@ $categories = get_all_categories($conn);
 								<?php } ?>
 							<br></b></i>
 							<?=$book['description']?>
-							<br><i><b>Category:
+							<br><i><b>هاوپۆل:
 								<?php foreach($categories as $category){ 
 									if ($category['id'] == $book['category_id']) {
 										echo $category['name'];
@@ -135,11 +135,11 @@ $categories = get_all_categories($conn);
 							<br></b></i>
 						</p>
                        <a href="uploads/files/<?=$book['file']?>"
-                          class="btn btn-success">Open</a>
+                          class="btn btn-success">کراوە</a>
 
                         <a href="uploads/files/<?=$book['file']?>"
                           class="btn btn-primary"
-                          download="<?=$book['title']?>">Download</a>
+                          download="<?=$book['title']?>">داگرتن</a>
 					</div>
 				</div>
 				<?php } ?>
@@ -153,7 +153,7 @@ $categories = get_all_categories($conn);
 					// do nothing
 				}else{ ?>
 				<a href="#"
-				   class="list-group-item list-group-item-action active">Category</a>
+				   class="list-group-item list-group-item-action active">هاوپۆل</a>
 				   <?php foreach ($categories as $category ) {?>
 				  
 				   <a href="category.php?id=<?=$category['id']?>"
@@ -168,7 +168,7 @@ $categories = get_all_categories($conn);
 					// do nothing
 				}else{ ?>
 				<a href="#"
-				   class="list-group-item list-group-item-action active">Author</a>
+				   class="list-group-item list-group-item-action active">نووسەر</a>
 				   <?php foreach ($authors as $author ) {?>
 				  
 				   <a href="author.php?id=<?=$author['id']?>"

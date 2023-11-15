@@ -27,7 +27,7 @@ if (isset($_SESSION['user_id']) &&
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>ADMIN</title>
+	<title>ئادمین</title>
 
     <!-- bootstrap 5 CDN-->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
@@ -40,7 +40,7 @@ if (isset($_SESSION['user_id']) &&
 	<div class="container">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		  <div class="container-fluid">
-		    <a class="navbar-brand" href="admin.php">Admin</a>
+		    <a class="navbar-brand" href="admin.php">ئادمین</a>
 		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		      <span class="navbar-toggler-icon"></span>
 		    </button>
@@ -50,23 +50,23 @@ if (isset($_SESSION['user_id']) &&
 		        <li class="nav-item">
 		          <a class="nav-link" 
 		             aria-current="page" 
-		             href="index.php">Store</a>
+		             href="index.php">کۆگا</a>
 		        </li>
 		        <li class="nav-item">
 		          <a class="nav-link" 
-		             href="add-book.php">Add Book</a>
+		             href="add-book.php">زیادکردنی کتێب</a>
 		        </li>
 		        <li class="nav-item">
 		          <a class="nav-link" 
-		             href="add-category.php">Add Category</a>
+		             href="add-category.php">زیادکردنی هاوپۆل</a>
 		        </li>
 		        <li class="nav-item">
 		          <a class="nav-link" 
-		             href="add-author.php">Add Author</a>
+		             href="add-author.php">زیادکردنی نووسەر</a>
 		        </li>
 		        <li class="nav-item">
 		          <a class="nav-link" 
-		             href="logout.php">Logout</a>
+		             href="logout.php">چوونە دەرەوە</a>
 		        </li>
 		      </ul>
 		    </div>
@@ -113,22 +113,22 @@ if (isset($_SESSION['user_id']) &&
         	     <img src="img/empty.png" 
         	          width="100">
         	     <br>
-			  There is no book in the database
+			  هیچ کتێبێک نییە لە بنکەدراوە
 		  </div>
         <?php }else {?>
 
 
         <!-- List of all books -->
-		<h4>All Books</h4>
+		<h4>کتێبەکان</h4>
 		<table class="table table-bordered shadow">
 			<thead>
 				<tr>
 					<th>#</th>
-					<th>Title</th>
-					<th>Author</th>
-					<th>Description</th>
-					<th>Category</th>
-					<th>Action</th>
+					<th>ناوی کتێب</th>
+					<th>نووسەر</th>
+					<th>ناساندن</th>
+					<th>هاوپۆل</th>
+					<th>کارگێری</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -178,11 +178,11 @@ if (isset($_SESSION['user_id']) &&
 				<td>
 					<a href="edit-book.php?id=<?=$book['id']?>" 
 					   class="btn btn-warning">
-					   Edit</a>
+					   گۆڕانکاری</a>
 
 					<a href="php/delete-book.php?id=<?=$book['id']?>" 
 					   class="btn btn-danger">
-				       Delete</a>
+				       سڕینەوە </a>
 				</td>
 			  </tr>
 			  <?php } ?>
@@ -197,7 +197,7 @@ if (isset($_SESSION['user_id']) &&
         	     <img src="img/empty.png" 
         	          width="100">
         	     <br>
-			  There is no category in the database
+			  هیچ هاوپۆلێک نییە لە بنکەدراوە
 		    </div>
         <?php }else {?>
 	    <!-- List of all categories -->
@@ -206,8 +206,8 @@ if (isset($_SESSION['user_id']) &&
 			<thead>
 				<tr>
 					<th>#</th>
-					<th>Category Name</th>
-					<th>Action</th>
+					<th>ناوی هاوپۆل</th>
+					<th>کارگێری</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -222,11 +222,11 @@ if (isset($_SESSION['user_id']) &&
 					<td>
 						<a href="edit-category.php?id=<?=$category['id']?>" 
 						   class="btn btn-warning">
-						   Edit</a>
+						   گۆڕانکاری</a>
 
 						<a href="php/delete-category.php?id=<?=$category['id']?>" 
 						   class="btn btn-danger">
-					       Delete</a>
+					       سڕینەوە</a>
 					</td>
 				</tr>
 			    <?php } ?>
@@ -241,7 +241,7 @@ if (isset($_SESSION['user_id']) &&
         	     <img src="img/empty.png" 
         	          width="100">
         	     <br>
-			  There is no author in the database
+			  هیچ نووسەرێک نییە لە بنکەدراوە
 		    </div>
         <?php }else {?>
 	    <!-- List of all Authors -->
@@ -250,8 +250,8 @@ if (isset($_SESSION['user_id']) &&
 			<thead>
 				<tr>
 					<th>#</th>
-					<th>Author Name</th>
-					<th>Action</th>
+					<th>ناوی نووسەر</th>
+					<th>کارگێری</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -266,11 +266,11 @@ if (isset($_SESSION['user_id']) &&
 					<td>
 						<a href="edit-author.php?id=<?=$author['id']?>" 
 						   class="btn btn-warning">
-						   Edit</a>
+						   گۆڕانکاری</a>
 
 						<a href="php/delete-author.php?id=<?=$author['id']?>" 
 						   class="btn btn-danger">
-					       Delete</a>
+					       سڕینەوە</a>
 					</td>
 				</tr>
 			    <?php } ?>

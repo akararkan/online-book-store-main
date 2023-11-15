@@ -24,7 +24,7 @@ if (isset($_SESSION['user_id']) &&
 
 		#simple form Validation
 		if (empty($name)) {
-			$em = "The category name is required";
+			$em = "ناوی هاوپۆلت نەنووسیوە";
 			header("Location: ../edit-category.php?error=$em&id=$id");
             exit;
 		}else {
@@ -41,12 +41,12 @@ if (isset($_SESSION['user_id']) &&
 		    **/
 		     if ($res) {
 		     	# success message
-		     	$sm = "Successfully updated!";
+		     	$sm = "بەسەرکەوتووی گۆڕانکاری ئەنجام درا";
 				header("Location: ../edit-category.php?success=$sm&id=$id");
 	            exit;
 		     }else{
 		     	# Error message
-		     	$em = "Unknown Error Occurred!";
+		     	$em = "هەڵەیەک ڕوویدا لە گۆڕانی هاوپۆلدا";
 				header("Location: ../edit-category.php?error=$em&id=$id");
 	            exit;
 		     }

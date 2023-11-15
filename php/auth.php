@@ -1,4 +1,6 @@
 <?php
-echo "Logged In as Admin"
+echo "چەنە ژوورەوە سەرکەوتوو بوو";
+
+header("Location: ../");
 
 ?> 

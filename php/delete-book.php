@@ -22,7 +22,7 @@ if (isset($_SESSION['user_id']) &&
 
 		#simple form Validation
 		if (empty($id)) {
-			$em = "Error Occurred!";
+			$em = "هەڵەیەک ڕوویدا لە سڕینەوەی کتێب";
 			header("Location: ../admin.php?error=$em");
             exit;
 		}else {
@@ -56,17 +56,17 @@ if (isset($_SESSION['user_id']) &&
 
 
 			     	# success message
-			     	$sm = "Successfully removed!";
+			     	$sm = "بەسەرکەوتووی سڕایەوە";
 					header("Location: ../admin.php?success=$sm");
 		            exit;
 			     }else{
 			     	# Error message
-			     	$em = "Unknown Error Occurred!";
+			     	$em = "هەڵەیەک ڕوویدا لە سڕینەوەی کتێب";
 					header("Location: ../admin.php?error=$em");
 		            exit;
 			     }
 			 }else {
-			 	$em = "Error Occurred!";
+			 	$em = "هەڵەیەک ڕوویدا لە سڕینەوەی کتێب";
 			    header("Location: ../admin.php?error=$em");
                 exit;
 			 }

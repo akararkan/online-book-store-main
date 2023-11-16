@@ -3,9 +3,11 @@
 
 
 * {
-	direction: rtl;
-	font-family: 'Vazirmatn', sans-serif;
+	direction: rtl !important;
+	font-family:  'Vazirmatn', sans-serif !important;
 }
+
+
 
 .pdf-list {
 	width: 80%;

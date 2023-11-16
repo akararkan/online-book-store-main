@@ -78,7 +78,7 @@ $categories = get_all_categories($conn);
 		    </div>
 		  </div>
 		</nav><br>
-		Search result for <b><?=$key?></b>
+		ئەنجامی گەڕان بۆ "<b><?=$key?></b>"
 
 		<div class="d-flex pt-3">
 			<?php if ($books == 0){ ?>
@@ -88,7 +88,7 @@ $categories = get_all_categories($conn);
         	     <img src="img/empty-search.png" 
         	          width="100">
         	     <br>
-				  ئەم کلیلە <b>"<?=$key?>"</b> ناگونجێ لەگەڵ تۆماری بنکەدراودا
+				  هیچ بابەتێک بە ناوی:  <b>"<?=$key?>"</b> نەدۆزرایەوە
 			  </div>
 			<?php }else{ ?>
 			<div class="pdf-list d-flex flex-wrap">

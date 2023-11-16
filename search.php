@@ -29,7 +29,7 @@ $categories = get_all_categories($conn);
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Book Store</title>
+	<title>کۆگای کتێب</title>
 
     <!-- bootstrap 5 CDN-->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
@@ -44,7 +44,7 @@ $categories = get_all_categories($conn);
 	<div class="container">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		  <div class="container-fluid">
-		    <a class="navbar-brand" href="index.php">Online Book Store</a>
+		    <a class="navbar-brand" href="index.php">کۆگای کتێبی سەرهێڵ</a>
 		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		      <span class="navbar-toggler-icon"></span>
 		    </button>
@@ -54,23 +54,23 @@ $categories = get_all_categories($conn);
 		        <li class="nav-item">
 		          <a class="nav-link active" 
 		             aria-current="page" 
-		             href="index.php">Store</a>
+		             href="index.php">کۆگا </a>
 		        </li>
 		        <li class="nav-item">
 		          <a class="nav-link" 
-		             href="#">Contact</a>
+		             href="#">پەیوەندی</a>
 		        </li>
 		        <li class="nav-item">
 		          <a class="nav-link" 
-		             href="#">About</a>
+		             href="#">دەربارە</a>
 		        </li>
 		        <li class="nav-item">
 		          <?php if (isset($_SESSION['user_id'])) {?>
 		          	<a class="nav-link" 
-		             href="admin.php">Admin</a>
+		             href="admin.php">ئادمین </a>
 		          <?php }else{ ?>
 		          <a class="nav-link" 
-		             href="login.php">Login</a>
+		             href="login.php">چوونەژوورەوە</a>
 		          <?php } ?>
 
 		        </li>
@@ -88,8 +88,7 @@ $categories = get_all_categories($conn);
         	     <img src="img/empty-search.png" 
         	          width="100">
         	     <br>
-				  The key <b>"<?=$key?>"</b> didn't match to any record
-		           in the database
+				  ئەم کلیلە <b>"<?=$key?>"</b> ناگونجێ لەگەڵ تۆماری بنکەدراودا
 			  </div>
 			<?php }else{ ?>
 			<div class="pdf-list d-flex flex-wrap">
@@ -102,7 +101,7 @@ $categories = get_all_categories($conn);
 							<?=$book['title']?>
 						</h5>
 						<p class="card-text">
-							<i><b>By:
+							<i><b>لەلایەن:
 								<?php foreach($authors as $author){ 
 									if ($author['id'] == $book['author_id']) {
 										echo $author['name'];
@@ -113,7 +112,7 @@ $categories = get_all_categories($conn);
 								<?php } ?>
 							<br></b></i>
 							<?=$book['description']?>
-							<br><i><b>Category:
+							<br><i><b>هاوپۆل: 
 								<?php foreach($categories as $category){ 
 									if ($category['id'] == $book['category_id']) {
 										echo $category['name'];
@@ -125,11 +124,11 @@ $categories = get_all_categories($conn);
 							<br></b></i>
 						</p>
                        <a href="uploads/files/<?=$book['file']?>"
-                          class="btn btn-success">Open</a>
+                          class="btn btn-success">کردنەوە</a>
 
                         <a href="uploads/files/<?=$book['file']?>"
                           class="btn btn-primary"
-                          download="<?=$book['title']?>">Download</a>
+                          download="<?=$book['title']?>">داگرتن</a>
 					</div>
 				</div>
 				<?php } ?>
